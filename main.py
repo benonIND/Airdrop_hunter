@@ -56,7 +56,7 @@ def main():
         elif pilihan == '5':
             edit_my_info(data)
         elif pilihan == '6':
-            search_new_airdrops_scraping(data)
+            search_new_airdrops(data)
         elif pilihan == '7':
             print("\nTerima kasih telah menggunakan skrip ini!")
             break
