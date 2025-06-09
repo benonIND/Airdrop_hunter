@@ -10,24 +10,16 @@ from feature_info import show_my_info, edit_my_info
 from feature_search import search_new_airdrops
 
 def print_header():
-    """Mencetak header aplikasi dengan logo ASCII."""
-    # Logo dan teks kustom
-    logo = r"""
-     __ __   ____  ____    ____  _   _  _  _  ____  ____     
-    (  (  ) / ___)(  _ \  (  __)( )_( )( \/ )( ___)(  _ \    
-    /    /  \___ \ )___/   ) _)  ) _ (  )  (  )__)  )   /    
-    \_)__)  (____/(__)    (____)(_) (_)(_/\_)(____)(_)\_)___ 
-     ____  _   _  _____  __  __  ____  _____   _   _  ____  
-    ( ___)( )_( )(  _  )(  )(  )(  _ \(  _  ) ( )_( )/ ___) 
-     )__)  ) _ (  )(_)(  )(__)(  )___/ )(_)(   ) _ ( \___ \ 
-    (____)(_) (_)(_____)(______)(__)  (_____) (_) (_)(____/ 
-    """
+    """Mencetak header aplikasi dengan desain satu baris yang minimalis."""
     
-    # Warna untuk logo dan teks (menggunakan kode ANSI escape)
-    # \033[96m untuk Cyan Terang, \033[93m untuk Kuning Terang, \033[0m untuk reset
-    print("\033[96m" + logo + "\033[0m")
-    print(" " * 23 + "\033[93m" + "--- by Yorima ---" + "\033[0m")
-    print("-" * 65)
+    # Warna: \033[92m Hijau, \033[90m Abu-abu, \033[95m Magenta, \033[0m Reset
+    green = "\033[92m"
+    gray = "\033[90m"
+    magenta = "\033[95m"
+    reset = "\033[0m"
+
+    # Desain header satu baris
+    print(f"{green}»»--- {reset}Airdrop Hunter {gray}|{magenta} by Yorima{green} ---««{reset}\n")
 
 
 def main():
@@ -39,15 +31,17 @@ def main():
         print_header() # Memanggil fungsi header baru
 
         # Tampilan Menu
-        print("Menu:")
-        print("1. Lihat Daftar Airdrop")
-        print("2. Tambah Airdrop Baru")
-        print("3. Kelola Airdrop (Ubah Status/Hapus)")
-        print("4. Tampilkan Info Saya (untuk Copy-Paste)")
-        print("5. Edit Info Saya")
-        print("6. Cari Airdrop Baru (Otomatis)")
-        print("7. Keluar")
-        print("-" * 65)
+        gray = "\033[90m"
+        reset = "\033[0m"
+
+        print(f"1. Lihat Airdrop")
+        print(f"2. Tambah Airdrop")
+        print(f"3. Kelola Airdrop")
+        print(f"4. Info Saya")
+        print(f"5. Edit Info")
+        print(f"6. Cari Airdrop Baru")
+        print(f"7. Keluar")
+        print(f"{gray}-----------------------------{reset}")
 
         pilihan = input("Pilih menu (1-7): ")
 
@@ -62,7 +56,7 @@ def main():
         elif pilihan == '5':
             edit_my_info(data)
         elif pilihan == '6':
-            search_new_airdrops(data)
+            search_new_airdrops_scraping(data)
         elif pilihan == '7':
             print("\nTerima kasih telah menggunakan skrip ini!")
             break
