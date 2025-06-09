@@ -8,7 +8,7 @@ from utils import clear_screen
 # URL target yang akan kita "scrape"
 TARGET_URL = "https://airdrops.io/latest/"
 
-def search_new_airdrops_scraping(data):
+def search_new_airdrops(data):
     """Mencari airdrop baru dengan mengambil data langsung dari airdrops.io."""
     clear_screen()
     print(f"--- Mencari Airdrop Baru (Metode Scraping) ---\nSumber: {TARGET_URL}\n")
