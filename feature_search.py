@@ -24,7 +24,7 @@ def search_new_airdrops(data):
         response.raise_for_status()
 
         # Menggunakan BeautifulSoup untuk mem-parsing HTML
-        soup = BeautifulSoup(response.text, 'lxml')
+        soup = BeautifulSoup(response.text, 'html.parser')
 
         # Mencari semua airdrop. Berdasarkan inspeksi web, setiap airdrop ada di dalam
         # tag <article> dengan class 'air-post'. Ini bisa berubah jika web di-update.
