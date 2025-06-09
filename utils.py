@@ -7,7 +7,7 @@ import platform
 
 # Konstanta yang bisa diakses dari file lain
 DATA_FILE = 'airdrop_data.json'
-AIRDROP_RSS_FEED = "https://nitter.net/AirdropO_/rss"
+AIRDROP_RSS_FEED = "https://airdrops.io/feed/"
 
 def clear_screen():
     """Membersihkan layar terminal."""
