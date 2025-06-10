@@ -1,4 +1,5 @@
 from helpers import Colors, show_banner, clear_screen, format_table
+from bs4 import BeautifulSoup
 from feature1_search import fetch_with_scrapingbee, SCRAPINGBEE_API_KEY
 import time
 import random
