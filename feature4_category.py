@@ -104,8 +104,7 @@ def search_by_value_range(min_value=1000):
     print(format_table(
         ["No", "Nama", "Nilai", "Sumber"],
         [[idx+1, a['name'], a['value'], a['source']] 
-        for idx, a in enumerate(filtered[:15]))
-         )
+        for idx, a in enumerate(filtered[:15])))
     
     input("\nTekan Enter untuk kembali...")
 
