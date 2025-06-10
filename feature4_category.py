@@ -137,7 +137,7 @@ def search_by_deadline(days=7):
     print(format_table(
         ["No", "Nama", "Deadline", "Sumber"],
         [[idx+1, a['name'], a['end_date'], a['source']] 
-        for idx, a in enumerate(filtered[:15]))
+        for idx, a in enumerate(filtered[:15])))
     
     input("\nTekan Enter untuk kembali...")
 
