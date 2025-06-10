@@ -206,10 +206,12 @@ def show_results_from_source(source_name, fetcher):
             return
         
         print(f"\n✅ Ditemukan {len(airdrops)} airdrop:")
-        print(format_table(
-            ["No", "Nama", "Nilai", "Deadline"],
-            [[idx+1, a['name'], a['value'], a['end_date']] 
-            for idx, a in enumerate(airdrops[:15])))
+        headers = ["No","Nama","Nilai","Deadline"]
+        rows = [
+        [str(idx+1), a['name'],a['value'],a['end_date']]
+        for idx, a in enumerate(filtered[:15])
+        ]
+        print(format_table(headers, rows)
         
         input("\nTekan Enter untuk kembali...")
     except Exception as e:
