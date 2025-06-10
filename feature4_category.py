@@ -101,10 +101,12 @@ def search_by_value_range(min_value=1000):
         return
     
     print(f"\n🔍 Ditemukan {len(filtered)} airdrop bernilai tinggi:")
-    print(format_table(
-        ["No", "Nama", "Nilai", "Sumber"],
-        [[idx+1, a['name'], a['value'], a['source']] 
-        for idx, a in enumerate(filtered[:15])))
+    headers = ["No","Nama","Nilai","Sumber"]
+    rows = [
+        [str(idx+1), a['name'],a['value'],a['source']]
+        for idx, a in enumerate(filtered[:15])
+    ]
+    print(format_table(headers, rows)
     
     input("\nTekan Enter untuk kembali...")
 
@@ -133,10 +135,12 @@ def search_by_deadline(days=7):
         return
     
     print(f"\n⏳ Airdrop segera berakhir:")
-    print(format_table(
-        ["No", "Nama", "Deadline", "Sumber"],
-        [[idx+1, a['name'], a['end_date'], a['source']]
-        for idx, a in enumerate(filtered[:15])))
+    headers = ["No","Nama","Deadline","Sumber"]
+    rows = [
+        [str(idx+1), a['name'],a['end_date'],a['source']]
+        for idx, a in enumerate(filtered[:15])
+    ]
+    print(format_table(headers, rows)
     
     input("\nTekan Enter untuk kembali...")
 
