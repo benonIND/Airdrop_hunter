@@ -1,9 +1,9 @@
 # feature7_stats.py (Revisi)
 from helpers import Colors, show_banner, clear_screen, format_table
-from main import saved_airdrops
+from shared_data import saved_airdrops
 from datetime import datetime
 
-def show_stats(saved_airdrops):
+def show_stats():
     show_banner()
     print(f"{Colors.BOLD}=== Statistik Airdrop ==={Colors.ENDC}")
     
