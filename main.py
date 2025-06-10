@@ -4,7 +4,11 @@
 
 import os
 import sys
-from helpers import clear_screen, show_banner, setup_database
+from helpers import clear_screen, show_banner, setup_database, Colors
+
+# global variabke menyimpan Data
+saved_airdrops = []
+notifications = []
 
 # Import semua fitur
 from feature1_search import search_airdrops
