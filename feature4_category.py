@@ -106,7 +106,7 @@ def search_by_value_range(min_value=1000):
         [str(idx+1), a['name'],a['value'],a['source']]
         for idx, a in enumerate(filtered[:15])
     ]
-    print(format_table(headers, rows)
+    print(format_table(headers, rows))
     
     input("\nTekan Enter untuk kembali...")
 
@@ -140,7 +140,7 @@ def search_by_deadline(days=7):
         [str(idx+1), a['name'],a['end_date'],a['source']]
         for idx, a in enumerate(filtered[:15])
     ]
-    print(format_table(headers, rows)
+    print(format_table(headers, rows))
     
     input("\nTekan Enter untuk kembali...")
 
@@ -211,7 +211,7 @@ def show_results_from_source(source_name, fetcher):
         [str(idx+1), a['name'],a['value'],a['end_date']]
         for idx, a in enumerate(filtered[:15])
         ]
-        print(format_table(headers, rows)
+        print(format_table(headers, rows))
         
         input("\nTekan Enter untuk kembali...")
     except Exception as e:
