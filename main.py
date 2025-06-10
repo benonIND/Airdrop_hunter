@@ -6,7 +6,7 @@ import os
 import sys
 from helpers import clear_screen, show_banner, setup_database, Colors
 
-# global variabke menyimpan Data
+# global variable menyimpan Data
 saved_airdrops = []
 notifications = []
 
@@ -50,7 +50,7 @@ def main_menu():
         elif choice == '6':
             import_menu()
         elif choice == '7':
-            show_stats()
+            show_stats(saved_airdrops)
         elif choice == '8':
             clear_screen()
             print("Terima kasih telah menggunakan Airdrop Hunter!")
