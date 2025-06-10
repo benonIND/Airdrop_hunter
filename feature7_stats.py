@@ -3,7 +3,7 @@ from helpers import Colors, show_banner, clear_screen, format_table
 from main import saved_airdrops
 from datetime import datetime
 
-def show_stats():
+def show_stats(saved_airdrops):
     show_banner()
     print(f"{Colors.BOLD}=== Statistik Airdrop ==={Colors.ENDC}")
     
