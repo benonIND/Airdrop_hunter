@@ -57,7 +57,7 @@ def show_banner():
     ╚═╝  ╚═╝╚═╝╚═╝     ╚═╝      ╚═════╝ ╚═╝     
     {Colors.ENDC}""")
     print(f"{Colors.BOLD}=== Airdrop Hunter v2.0 ==={Colors.ENDC}")
-    print(f"{Colors.OKBLUE}Developer: Yorima_ (github.com/yorima-dev){Colors.ENDC}\n")
+    print(f"{Colors.WARNING}Developer: Yorima_ (github.com/benonIND){Colors.ENDC}\n")
 
 # Fungsi untuk mendapatkan data dari database
 def get_db_data(query, params=()):
